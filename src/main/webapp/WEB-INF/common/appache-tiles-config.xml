@@ -19,11 +19,11 @@
 			value="/WEB-INF/views/index.jsp" />
 	</definition>
 	
-<!-- 	<definition name="productListPage" extends="base.definition"> -->
-<!-- 		<put-attribute name="title" value="Product List" /> -->
-<!-- 		<put-attribute name="body" -->
-<!-- 			value="/WEB-INF/products/productList.jsp" /> -->
-<!-- 	</definition> -->
+	<definition name="productListPage" extends="base.definition">
+		<put-attribute name="title" value="Product List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product.jsp" />
+	</definition>
 	
 <!-- 	<definition name="detailProductPage" extends="base.definition"> -->
 <!-- 		<put-attribute name="title" value="Detail Product" /> -->
