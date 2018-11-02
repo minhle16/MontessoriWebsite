@@ -8,22 +8,20 @@ import org.springframework.web.servlet.ModelAndView;
 import product.spring.demo.service.ProductService;
 
 @Controller
-public class HelloController {
+@RequestMapping("/admin")
+public class AdminController {
 
 	@Autowired
 	private ProductService service;
 	
-	@RequestMapping(value = {"/", "", "/index" })
+	@RequestMapping(value = {"/", ""})
 	public String index() {
-		return "homePage";
+		return "homeAdminPage";
 	}
 
 	@RequestMapping(value = "/product")
 	public ModelAndView products() {
-		
-		ModelAndView m = new ModelAndView("productListPage");
-		m.addObject("msg", "Spring Hello");
-				
+		ModelAndView m = new ModelAndView("productListAdminPage");
 		m.addObject("msg", "Spring Hello1");
 		m.addObject("allProduct", service.getAllProduct());
 		return m;

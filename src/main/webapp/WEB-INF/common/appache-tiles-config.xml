@@ -31,4 +31,24 @@
 <!-- 			value="/WEB-INF/products/detail_product.jsp" /> -->
 <!-- 	</definition> -->
 
+	<!-- -ADMIN START -->
+	<definition name="baseadmin.definition" template="/WEB-INF/common/classicAdmin.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="sidebar" value="/WEB-INF/common/sidebarAdmin.jsp" />
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="homeAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Home Admin Page" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/dashboard.jsp" />
+	</definition>
+	
+	<definition name="productListAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Product List - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/productList.jsp" />
+	</definition>
+	
+	<!-- -ADMIN END -->
 </tiles-definitions>

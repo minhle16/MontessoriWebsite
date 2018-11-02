@@ -6,8 +6,11 @@
 <head>
 
 <title><tiles:getAsString name="title" /></title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"></link>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css"></link>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css"></link>
+
+<!--  Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,15 +18,16 @@
 
 </head>
 <body>
-
-	<tiles:insertAttribute name="header" />
-
-	<section>
-		<tiles:insertAttribute name="navigator" />
-		<tiles:insertAttribute name="body" />
-	</section>
-
-	<tiles:insertAttribute name="footer" />
-
+	
+	<div class="sidebar">
+			<tiles:insertAttribute name="sidebar" />
+	</div>
+		
+	<div class="flex">
+		<div class="sidebar2"></div>
+		<div class="content">
+			<tiles:insertAttribute name="content" />
+		</div>
+	</div>
 </body>
 </html>
