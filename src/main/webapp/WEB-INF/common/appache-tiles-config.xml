@@ -50,5 +50,17 @@
 			value="/WEB-INF/views/product/productList.jsp" />
 	</definition>
 	
+	<definition name="editProductAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Edit Product - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/editProduct.jsp" />
+	</definition>
+	
+	<definition name="createProductAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Create Product - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/createProduct.jsp" />
+	</definition>
 	<!-- -ADMIN END -->
+	
 </tiles-definitions>
