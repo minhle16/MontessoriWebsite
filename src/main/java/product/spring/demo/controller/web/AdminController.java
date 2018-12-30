@@ -1,18 +1,17 @@
 package product.spring.demo.controller.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import product.spring.demo.service.ProductService;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
 
-	@Autowired
-	private ProductService productService;
+	//@Autowired
+//	private ProductService productService;
 	
 	@RequestMapping(value = {"/", ""})
 	public String index() {
@@ -24,7 +23,7 @@ public class AdminController {
 	public ModelAndView products() {
 		ModelAndView m = new ModelAndView("productListAdminPage");
 		m.addObject("msg", "Spring Hello1");
-		m.addObject("allProduct", productService.getAllProduct());
+		//m.addObject("allProduct", productService.getAllProduct());
 		return m;
 	}
 	
